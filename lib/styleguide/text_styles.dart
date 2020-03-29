@@ -1,0 +1,25 @@
+import 'package:flutter/material.dart';
+import 'package:shoe_store/styleguide/colors.dart';
+
+final TextStyle menuTextStyle = TextStyle(
+  color: Colors.white,
+  fontSize: 14.0,
+    fontFamily: "poppins"
+);
+
+final TextStyle selectedMenuTextStyle = TextStyle(
+  color: Color(0XFFC4727E),
+  fontSize: 14.0,
+  fontFamily: "poppins"
+);
+
+final Color selectedIconStyle = Color(0XFFF76C4B);
+
+final Color iconStyle = Color(0XFFFFFFFF);
+
+final TextStyle menuCenterStyle = TextStyle(
+  color: Color(0XFFCBCBCD),
+  fontSize: 18.0,
+  fontFamily: 'Poppins',
+  letterSpacing: 2.0
+);
