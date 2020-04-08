@@ -5,6 +5,7 @@ import 'package:shoe_store/styleguide/text_styles.dart';
 import 'package:shoe_store/widgets/app_background.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:shoe_store/widgets/nav_items.dart';
+import 'package:shoe_store/styleguide/size_config.dart';
 
 class LandingPage extends StatefulWidget {
   @override
@@ -102,16 +103,16 @@ class _LandingPageState extends State<LandingPage>
                               "Hey",
                               style: TextStyle(
                                   color: Colors.white,
-                                  fontSize: 21,
+                                  fontSize: 2.5 * SizeConfig.textMultiplier,
                                   fontFamily: "poppins"),
                             ),
                             SizedBox(
-                              height: 17.0,
+                              height: 2 * SizeConfig.heightMultiplier,
                             ),
                             Text("Ajiboye Joshua", style: TextStyle(
                               fontFamily: "poppins",
                               color: Colors.white,
-                              fontSize: 21,
+                              fontSize: 2.47 * SizeConfig.textMultiplier,
                               fontWeight: FontWeight.bold
                             ),)
                           ],
@@ -130,7 +131,7 @@ class _LandingPageState extends State<LandingPage>
                             text: "Profile",
                           ),
                           SizedBox(
-                            height: 11.0,
+                            height: 1.3 * SizeConfig.heightMultiplier,
                           ),
                           NavTabItems(
                             isSelected: selectedTabIndex == 1,
@@ -141,7 +142,7 @@ class _LandingPageState extends State<LandingPage>
                             text: "Home Page",
                           ),
                           SizedBox(
-                            height: 11.0,
+                            height: 1.3 * SizeConfig.heightMultiplier,
                           ),
                           NavTabItems(
                             isSelected: selectedTabIndex == 2,
@@ -152,7 +153,7 @@ class _LandingPageState extends State<LandingPage>
                             text: "My Cart",
                           ),
                           SizedBox(
-                            height: 11.0,
+                            height: 1.3 * SizeConfig.heightMultiplier,
                           ),
                           NavTabItems(
                             isSelected: selectedTabIndex == 3,
@@ -163,7 +164,7 @@ class _LandingPageState extends State<LandingPage>
                             text: "Favorite",
                           ),
                           SizedBox(
-                            height: 11.0,
+                            height: 1.3 * SizeConfig.heightMultiplier,
                           ),
                           NavTabItems(
                             isSelected: selectedTabIndex == 4,
@@ -174,7 +175,7 @@ class _LandingPageState extends State<LandingPage>
                             text: "Orders",
                           ),
                           SizedBox(
-                            height: 11.0,
+                            height: 1.3 * SizeConfig.heightMultiplier,
                           ),
                           NavTabItems(
                             isSelected: selectedTabIndex == 5,
@@ -247,266 +248,283 @@ class _LandingPageState extends State<LandingPage>
             elevation: 8.0,
             borderRadius: BorderRadius.circular(isCollapsed ? 0 : 70.0),
             color: Colors.white,
-            child: ListView(
+            child: Stack(
               children: <Widget>[
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: <Widget>[
-                    SizedBox(
-                      height: 30.0,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                Container(
+                  margin: EdgeInsets.only(top: 6.95 * SizeConfig.heightMultiplier),
+                  child: ScrollConfiguration(
+                    behavior: MyBehavior(),
+                    child: ListView(
                       children: <Widget>[
-                        InkWell(
-                          onTap: () {
-                            setState(() {
-                              isCollapsed
-                                  ? _controller.forward()
-                                  : _controller.reverse();
-                              isCollapsed = !isCollapsed;
-                            });
-                          },
-                          child: Image.asset(
-                            "assets/images/logo/menu.png",
-                            height: 45,
-                          ),
-                        ),
-                        Text(
-                          "WELCOME",
-                          style: menuCenterStyle,
-                        ),
-                        Container(
-                          height: 30.0,
-                          width: 30.0,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10.0),
-                              image: DecorationImage(
-                                  image: AssetImage(
-                                      "assets/images/profilepic2"
-                                          ""
-                                          ".jpg"),
-                                  fit: BoxFit.fitWidth)
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 50.0,
-                    ),
-                    Stack(
-                      children: <Widget>[
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.end,
                           children: <Widget>[
-                            Container(
-                              width: screenWidth / 1.35,
-                              height: screenHeight / 2,
-                              decoration: BoxDecoration(
-                                  color: Color(0XFFF7F7F7),
-                                  borderRadius: BorderRadius.only(
-                                      topLeft: Radius.circular(50.0),
-                                      bottomLeft: Radius.circular(50.0))),
+                            SizedBox(
+                              height: 3.53 * SizeConfig.heightMultiplier,
+                            ),
+                            SizedBox(
+                              height: 5.29 * SizeConfig.heightMultiplier,
+                            ),
+                            Stack(
+                              children: <Widget>[
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.end,
+                                  children: <Widget>[
+                                    Container(
+                                      width: screenWidth / 1.35,
+                                      height: screenHeight / 2,
+                                      decoration: BoxDecoration(
+                                          color: Color(0XFFF7F7F7),
+                                          borderRadius: BorderRadius.only(
+                                              topLeft: Radius.circular(50.0),
+                                              bottomLeft: Radius.circular(50.0))),
+                                    ),
+                                  ],
+                                ),
+                                Column(
+                                  children: <Widget>[
+                                    Container(
+                                      height: screenHeight / 3,
+                                      width: screenWidth,
+                                      child: Stack(
+                                        fit: StackFit.loose,
+                                        overflow: Overflow.clip,
+                                        textDirection: TextDirection.ltr,
+                                        alignment: AlignmentDirectional.topStart,
+                                        children: <Widget>[
+                                          Positioned(
+                                            right: screenWidth / 7.5,
+                                            width: screenWidth / 1.15,
+                                            bottom: -4.70 * SizeConfig.heightMultiplier,
+                                            child: Transform.rotate(
+                                              angle: -0.35,
+                                              child: Image.asset(
+                                                "assets/images/joyridee.png",
+                                              ),
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                    Container(
+                                      width: screenWidth / 1.3,
+                                      child: Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: <Widget>[
+                                          Text(
+                                            "Nike Joyride FlyKnit",
+                                            style: TextStyle(
+                                                color: Color(0XFF070513),
+                                                fontSize: 3.05 * SizeConfig.textMultiplier,
+                                                fontWeight: FontWeight.bold,
+                                                fontFamily: "poppins"),
+                                          ),
+                                          Padding(
+                                            padding: EdgeInsets.only(top: 1.76 * SizeConfig.heightMultiplier),
+                                            child: Text(
+                                              "Men's Running Shoe",
+                                              style: TextStyle(
+                                                  color: Color(0XFFA1A1A1),
+                                                  fontSize: 2.23 * SizeConfig.textMultiplier,
+                                                  fontWeight: FontWeight.w500,
+                                                  fontFamily: "poppins"),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    Container(
+                                      margin: EdgeInsets.only(top: 3.92 * SizeConfig.heightMultiplier),
+                                      height: 7.64 * SizeConfig.heightMultiplier,
+                                      child: Row(
+                                        mainAxisAlignment: MainAxisAlignment.end,
+                                        children: <Widget>[
+                                          Container(
+                                            margin: EdgeInsets.only(right: 12.72 * SizeConfig.widthMultiplier),
+                                            padding: EdgeInsets.all(1.76 * SizeConfig.heightMultiplier),
+                                            child: Icon(
+                                              CupertinoIcons.shopping_cart,
+                                              color: Colors.white,
+                                            ),
+                                            decoration: BoxDecoration(
+                                                color: Color(0XFFFE8071),
+                                                borderRadius:
+                                                BorderRadius.circular(20.0)),
+                                          )
+                                        ],
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ],
                             ),
                           ],
+                        ),
+                        SizedBox(
+                          height: 4.83 * SizeConfig.heightMultiplier,
                         ),
                         Column(
                           children: <Widget>[
-                            Container(
-                              height: screenHeight / 3,
-                              width: screenWidth,
-                              child: Stack(
-                                fit: StackFit.loose,
-                                overflow: Overflow.clip,
-                                textDirection: TextDirection.ltr,
-                                alignment: AlignmentDirectional.topStart,
-                                children: <Widget>[
-                                  Positioned(
-                                    right: screenWidth / 7.5,
-                                    width: screenWidth / 1.15,
-                                    bottom: -40,
-//                                top: 3,
-                                    child: Transform.rotate(
-                                      angle: -0.35,
-                                      child: Image.asset(
-                                        "assets/images/joyridee.png",
+                            Row(
+                              children: <Widget>[
+                                Expanded(
+                                    flex: 1,
+                                    child: Stack(
+                                      children: <Widget>[
+                                        Container(
+                                          height: 11.76 * SizeConfig.heightMultiplier,
+                                          margin: EdgeInsets.only(
+                                              left: 10.17 * SizeConfig.widthMultiplier,
+                                              top: 1.18 * SizeConfig.heightMultiplier),
+                                          decoration: BoxDecoration(
+                                              color: Color(0xFFF5F5F5),
+                                              borderRadius:
+                                              BorderRadius.circular(20.0)),
+                                        ),
+                                        Container(
+                                          height: 12.94 * SizeConfig.heightMultiplier,
+                                          margin: EdgeInsets.only(left: 10.18 * SizeConfig.widthMultiplier),
+                                          decoration: BoxDecoration(
+                                            image: DecorationImage(
+                                                image: AssetImage(
+                                                    "assets/images/joyrid.png")),
+                                          ),
+                                        ),
+                                      ],
+                                    )),
+                                Expanded(
+                                    flex: 2,
+                                    child: Container(
+                                      margin: EdgeInsets.only(left: 6.36 * SizeConfig.widthMultiplier),
+                                      child: Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: <Widget>[
+                                          Text(
+                                            "Nike Air Zoom Winflo 6",
+                                            style: TextStyle(
+                                                color: Color(0XFF08070F),
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 2.24 * SizeConfig.textMultiplier),
+                                          ),
+                                          SizedBox(
+                                            height: 1.76 * SizeConfig.textMultiplier,
+                                          ),
+                                          Text(
+                                            "Men's Tennis Shoe",
+                                            style: TextStyle(
+                                                color: Color(0XFFB9B9B9), fontSize: 1.88 * SizeConfig.textMultiplier),
+                                          )
+                                        ],
                                       ),
-                                    ),
-                                  )
-                                ],
-                              ),
+                                    ))
+                              ],
                             ),
-                            Container(
-                              width: screenWidth / 1.3,
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  Text(
-                                    "Nike Joyride FlyKnit",
-                                    style: TextStyle(
-                                        color: Color(0XFF070513),
-                                        fontSize: 26.0,
-                                        fontWeight: FontWeight.bold,
-                                        fontFamily: "poppins"),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsets.only(top: 15.0),
-                                    child: Text(
-                                      "Men's Running Shoe",
-                                      style: TextStyle(
-                                          color: Color(0XFFA1A1A1),
-                                          fontSize: 19.0,
-                                          fontWeight: FontWeight.w500,
-                                          fontFamily: "poppins"),
-                                    ),
-                                  ),
-                                ],
-                              ),
-//                          color: Colors.grey,
+                            SizedBox(
+                              height: 3.53 * SizeConfig.heightMultiplier,
                             ),
-                            Container(
-                              margin: const EdgeInsets.only(top: 35.0),
-                              height: 65.0,
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                children: <Widget>[
-                                  Container(
-                                    margin: const EdgeInsets.only(right: 50.0),
-                                    padding: const EdgeInsets.all(15.0),
-                                    child: Icon(
-                                      CupertinoIcons.shopping_cart,
-                                      color: Colors.white,
-                                    ),
-                                    decoration: BoxDecoration(
-                                        color: Color(0XFFFE8071),
-                                        borderRadius:
-                                            BorderRadius.circular(20.0)),
-                                  )
-                                ],
-                              ),
-                            )
+                            Row(
+                              children: <Widget>[
+                                Expanded(
+                                    flex: 1,
+                                    child: Stack(
+                                      children: <Widget>[
+                                        Container(
+                                          height: 11.76 * SizeConfig.heightMultiplier,
+                                          margin: EdgeInsets.only(
+                                              left: 10.17 * SizeConfig.widthMultiplier,
+                                              top: 1.18 * SizeConfig.heightMultiplier),
+                                          decoration: BoxDecoration(
+                                              color: Color(0xFFF5F5F5),
+                                              borderRadius:
+                                              BorderRadius.circular(20.0)),
+                                        ),
+                                        Container(
+                                          height: 12.94 * SizeConfig.heightMultiplier,
+                                          margin: EdgeInsets.only(left: 10.18 * SizeConfig.widthMultiplier),
+                                          decoration: BoxDecoration(
+                                            image: DecorationImage(
+                                                image: AssetImage(
+                                                    "assets/images/joyr.png")),
+                                          ),
+                                        ),
+                                      ],
+                                    )),
+                                Expanded(
+                                    flex: 2,
+                                    child: Container(
+                                      margin: EdgeInsets.only(left: 6.36 * SizeConfig.widthMultiplier),
+                                      child: Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: <Widget>[
+                                          Text(
+                                            "Nike Joyride Run FlyKnit",
+                                            style: TextStyle(
+                                                color: Color(0XFF08070F),
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 2.24 * SizeConfig.textMultiplier),
+                                          ),
+                                          SizedBox(
+                                            height: 1.76 * SizeConfig.heightMultiplier,
+                                          ),
+                                          Text(
+                                            "Men's Running Shoe",
+                                            style: TextStyle(
+                                                color: Color(0XFFB9B9B9), fontSize: 1.88 * SizeConfig.textMultiplier),
+                                          )
+                                        ],
+                                      ),
+                                    ))
+                              ],
+                            ),
                           ],
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(isCollapsed ? 0 : 70.0),
+                  ),
+                  padding: EdgeInsets.only(top: 7.65 * SizeConfig.heightMultiplier, bottom: 2.35 * SizeConfig.heightMultiplier),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: <Widget>[
+                      InkWell(
+                        onTap: () {
+                          setState(() {
+                            isCollapsed
+                                ? _controller.forward()
+                                : _controller.reverse();
+                            isCollapsed = !isCollapsed;
+                          });
+                        },
+                        child: Image.asset(
+                          "assets/images/logo/menu.png",
+                          height: 5.29 * SizeConfig.heightMultiplier,
                         ),
-                      ],
-                    ),
-                  ],
+                      ),
+                      Text(
+                        "WELCOME",
+                        style: menuCenterStyle,
+                      ),
+                      Container(
+                        height: 3.53 * SizeConfig.heightMultiplier,
+                        width: 3.53 * SizeConfig.heightMultiplier,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10.0),
+                            image: DecorationImage(
+                                image: AssetImage(
+                                    "assets/images/profilepic2"
+                                        ""
+                                        ".jpg"),
+                                fit: BoxFit.fitWidth)
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
-                SizedBox(
-                  height: 30.0,
-                ),
-                Column(
-                  children: <Widget>[
-                    Row(
-                      children: <Widget>[
-                        Expanded(
-                            flex: 1,
-                            child: Stack(
-                              children: <Widget>[
-                                Container(
-                                  height: 100.0,
-                                  margin: const EdgeInsets.only(
-                                      left: 40.0, top: 10),
-                                  decoration: BoxDecoration(
-                                      color: Color(0xFFF5F5F5),
-                                      borderRadius:
-                                          BorderRadius.circular(20.0)),
-                                ),
-                                Container(
-                                  height: 110,
-                                  margin: const EdgeInsets.only(left: 40.0),
-                                  decoration: BoxDecoration(
-                                    image: DecorationImage(
-                                        image: AssetImage(
-                                            "assets/images/joyrid.png")),
-                                  ),
-                                ),
-                              ],
-                            )),
-                        Expanded(
-                            flex: 2,
-                            child: Container(
-                              margin: const EdgeInsets.only(left: 25.0),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  Text(
-                                    "Nike Air Zoom Winflo 6",
-                                    style: TextStyle(
-                                        color: Color(0XFF08070F),
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 19),
-                                  ),
-                                  SizedBox(
-                                    height: 15,
-                                  ),
-                                  Text(
-                                    "Men's Tennis Shoe",
-                                    style: TextStyle(
-                                        color: Color(0XFFB9B9B9), fontSize: 16),
-                                  )
-                                ],
-                              ),
-                            ))
-                      ],
-                    ),
-                    SizedBox(
-                      height: 30.0,
-                    ),
-                    Row(
-                      children: <Widget>[
-                        Expanded(
-                            flex: 1,
-                            child: Stack(
-                              children: <Widget>[
-                                Container(
-                                  height: 100.0,
-                                  margin: const EdgeInsets.only(
-                                      left: 40.0, top: 10),
-                                  decoration: BoxDecoration(
-                                      color: Color(0xFFF5F5F5),
-                                      borderRadius:
-                                          BorderRadius.circular(20.0)),
-                                ),
-                                Container(
-                                  height: 110,
-                                  margin: const EdgeInsets.only(left: 40.0),
-                                  decoration: BoxDecoration(
-                                    image: DecorationImage(
-                                        image: AssetImage(
-                                            "assets/images/joyr.png")),
-                                  ),
-                                ),
-                              ],
-                            )),
-                        Expanded(
-                            flex: 2,
-                            child: Container(
-                              margin: const EdgeInsets.only(left: 25.0),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  Text(
-                                    "Nike Joyride Run FlyKnit",
-                                    style: TextStyle(
-                                        color: Color(0XFF08070F),
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 19),
-                                  ),
-                                  SizedBox(
-                                    height: 15,
-                                  ),
-                                  Text(
-                                    "Men's Running Shoe",
-                                    style: TextStyle(
-                                        color: Color(0XFFB9B9B9), fontSize: 16),
-                                  )
-                                ],
-                              ),
-                            ))
-                      ],
-                    ),
-                  ],
-                )
               ],
             ),
           ),
@@ -519,5 +537,13 @@ class _LandingPageState extends State<LandingPage>
     setState(() {
       selectedTabIndex = index;
     });
+  }
+}
+
+class MyBehavior extends ScrollBehavior {
+  @override
+  Widget buildViewportChrome(
+      BuildContext context, Widget child, AxisDirection axisDirection) {
+    return child;
   }
 }

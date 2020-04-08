@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:shoe_store/styleguide/container_styles.dart';
 import 'package:shoe_store/styleguide/text_styles.dart';
+import 'package:shoe_store/styleguide/size_config.dart';
 
 class NavTabItems extends StatelessWidget {
   final bool isSelected;
@@ -16,8 +17,8 @@ class NavTabItems extends StatelessWidget {
     return InkWell(
       onTap: onTabTap,
       child: AnimatedContainer(
-        width: 180.0,
-        padding: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 15.0),
+        width: 45.9 * SizeConfig.widthMultiplier,
+        padding: EdgeInsets.symmetric(horizontal: 1.27 * SizeConfig.widthMultiplier, vertical: 1.72 * SizeConfig.heightMultiplier),
         decoration: isSelected ? selectedTabStyle : defaultTabStyle,
         duration: const Duration(milliseconds: 300),
         child: Row(
@@ -28,7 +29,7 @@ class NavTabItems extends StatelessWidget {
             Expanded(
               flex: 2,
               child: Container(
-                margin: const EdgeInsets.only(top: 4.0),
+                margin: EdgeInsets.only(top: 0.47 * SizeConfig.heightMultiplier),
                 child: AnimatedDefaultTextStyle(
                     child: Text(text),
                     style: isSelected ? selectedMenuTextStyle : menuTextStyle,
