@@ -2,6 +2,8 @@
 
 A new Flutter project.
 
+<img src="https://github.com/joshh152/NikeStoreRedesign/blob/master/assets/images/s1.jpg" width="240"> 
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
