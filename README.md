@@ -16,7 +16,7 @@ Star⭐ the repo if you like what you see😉.
 
 ## 📸 ScreenShots
 
-|<img src="https://github.com/joshh152/NikeStoreRedesign/blob/master/assets/images/s1.jpg" width="400">|<img src="https://github.com/joshh152/NikeStoreRedesign/blob/master/Screenshot_2020-07-09-14-40-59-570_com.example.bata.jpg" width="400">|
+|<img src="https://github.com/joshh152/NikeStoreRedesign/blob/master/assets/images/s1.jpg" width="400">|<img src="https://github.com/joshh152/NikeStoreRedesign/blob/master/assets/images/Screenshot_2020-07-09-14-54-50-117_com.example.bata.jpg" width="400">|
 
 
 ## 🤓 Author(s)
