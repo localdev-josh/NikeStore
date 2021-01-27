@@ -1,10 +1,10 @@
-# Flutter Nike store app concept [![PRs Welcome](https://img.shields.io/twitter/follow/localdev_.svg?style=flat-square)](http://makeapullrequest.com) [![Twitter Follow](https://img.shields.io/twitter/follow/localdev_.svg?style=social)](https://twitter.com/localdev_)
+# Flutter Nike store app concept [![PRs Welcome](https://img.shields.io/twitter/follow/joshcre8tor.svg?style=flat-square)](http://makeapullrequest.com) [![Twitter Follow](https://img.shields.io/twitter/follow/joshcre8tor.svg?style=social)](https://twitter.com/joshcre8tor)
 
 A UI challenge gotten from dribbble.
 
 Star⭐ the repo if you like what you see😉
 
-[![Twitter Follow](https://img.shields.io/twitter/follow/localdev_.svg?style=social)](https://twitter.com/localdev_)
+[![Twitter Follow](https://img.shields.io/twitter/follow/joshcre8tor.svg?style=social)](https://twitter.com/joshcre8tor)
 
 
 ## ✨ Requirements
@@ -20,9 +20,10 @@ Star⭐ the repo if you like what you see😉
 
 
 ## 🤓 Author(s)
-**Ajiboy Joshua Oluwaseun** [![Twitter Follow](https://img.shields.io/twitter/follow/localdev_.svg?style=social)](https://twitter.com/localdev_)
+**Ajiboy Joshua Oluwaseun** [![Twitter Follow](https://img.shields.io/twitter/follow/joshcre8tor.svg?style=social)](https://twitter.com/joshcre8tor)
 
 
 ## 🔖 LICENCE
 [WTFPL](http://www.wtfpl.net/about/)
+
 
